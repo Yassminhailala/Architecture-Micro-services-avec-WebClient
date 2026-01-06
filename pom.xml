@@ -1,26 +1,44 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<projet xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+        https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
+    <modeleVersion>4.0.0</modeleVersion>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.1.5</version>
-        <relativePath/>
+        <cheminRelatif/>
     </parent>
 
-    <groupId>com.microservice</groupId>
-    <artifactId>TP21-Microservices</artifactId>
-    <version>1.0.0</version>
+    <groupId>com.systeme.microservices</groupId>
+    <artifactId>Projet-Microservices-Gestion</artifactId>
+    <version>2.0.0</version>
 
-    <packaging>pom</packaging>
+    <empaquetage>pom</empaquetage>
 
     <modules>
-        <module>EurekaServer</module>
-        <module>client</module>
-        <module>service-voiture</module>
+        <module>ServeurEureka</module>
+        <module>microservice-utilisateur</module>
+        <module>microservice-vehicule</module>
     </modules>
 
-</project>
+    <proprietes>
+        <version.java>17</version.java>
+        <version.spring-cloud>2022.0.4</version.spring-cloud>
+    </proprietes>
+
+    <gestionDependances>
+        <dependances>
+            <dependance>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${version.spring-cloud}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependance>
+        </dependances>
+    </gestionDependances>
+
+</projet>

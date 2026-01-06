@@ -1,97 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<projet xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+        https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
+    <modeleVersion>4.0.0</modeleVersion>
 
     <parent>
-        <groupId>com.microservice</groupId>
-        <artifactId>TP21-Microservices</artifactId>
-        <version>1.0.0</version>
+        <groupId>com.systeme.microservices</groupId>
+        <artifactId>Projet-Microservices-Gestion</artifactId>
+        <version>2.0.0</version>
     </parent>
 
-    <artifactId>service-car</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>service-car</name>
+    <artifactId>microservice-automobile</artifactId>
+    <version>1.0.0-RELEASE</version>
+    <nom>service-vehicule</nom>
 
-    <properties>
-        <java.version>17</java.version>
-        <spring-cloud.version>2022.0.4</spring-cloud.version>
-    </properties>
+    <proprietes>
+        <version.java>17</version.java>
+        <version.spring-cloud>2022.0.4</version.spring-cloud>
+    </proprietes>
 
-    <dependencies>
+    <dependances>
 
-        <!-- Web + JPA + H2 -->
-        <dependency>
+        <!-- API Web et persistance -->
+        <dependance>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+        </dependance>
 
-        <dependency>
+        <dependance>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+        </dependance>
 
-        <dependency>
+        <!-- Base de données embarquée -->
+        <dependance>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
-        </dependency>
+        </dependance>
 
-        <!-- Eureka Client -->
-        <dependency>
+        <!-- Client de découverte -->
+        <dependance>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
+        </dependance>
 
-        <!-- OpenFeign -->
-        <dependency>
+        <!-- Client HTTP déclaratif -->
+        <dependance>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
+        </dependance>
 
-        <!-- HATEOAS -->
-        <dependency>
+        <!-- Hypermedia -->
+        <dependance>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-hateoas</artifactId>
-        </dependency>
+        </dependance>
 
-
-        <dependency>
+        <!-- Tests -->
+        <dependance>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
+        </dependance>
 
-        <dependency>
+        <!-- Connecteur MySQL -->
+        <dependance>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.33</version>
-        </dependency>
+        </dependance>
 
-        <dependency>
+        <!-- Web réactif -->
+        <dependance>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-webflux</artifactId>
-        </dependency>
+        </dependance>
 
-        <dependency>
+        <!-- Équilibrage de charge -->
+        <dependance>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-loadbalancer</artifactId>
-        </dependency>
+        </dependance>
 
-    </dependencies>
+    </dependances>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
+    <gestionDependances>
+        <dependances>
+            <dependance>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
+                <version>${version.spring-cloud}</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
+            </dependance>
+        </dependances>
+    </gestionDependances>
 
-</project>
+</projet>

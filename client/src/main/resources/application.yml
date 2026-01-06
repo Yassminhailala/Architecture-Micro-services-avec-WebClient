@@ -1,22 +1,22 @@
-server:
+serveur:
   port: 8081
 
-spring:
+printemps:
   application:
-    name: SERVICE-CLIENT
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/clientservicedb?createDatabaseIfNotExist=true
-    username: "root"
-    password: "root1234"
+    nom: SERVICE-CLIENT
+  source-de-donnees:
+    pilote-class-nom: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://serveur-local:3306/bd_service_clients?creerBaseSiNonExistante=vrai
+    nom-utilisateur: "administrateur"
+    mot-de-passe: "admin1234"
   jpa:
     hibernate:
-      ddl-auto: create
-      show-sql: true
+      ddl-auto: creer
+      afficher-sql: vrai
 
 eureka:
   client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+    url-service:
+      zone-par-defaut: http://serveur-local:8761/eureka/
   instance:
-    prefer-ip-address: true
+    preferer-adresse-ip: vrai
